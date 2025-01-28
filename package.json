@@ -8,13 +8,16 @@
     "start": "npm list && node dist/bundle.js",
     "serve": "npm run build && npm start",
     "dev": "concurrently \"npx webpack --watch\" \"npm run dev-server\"",
-    "dev-server": "babel-node src/index.js"
+    "dev-server": "nodemon src/index.js",
+    "nodemon": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "Rizvan.is-a.dev",
   "license": "ISC",
   "dependencies": {
+    "babel-node": "^0.0.1-security",
     "bcrypt": "^5.1.1",
+    "concurrently": "^9.1.2",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
@@ -22,8 +25,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "4.1",
     "mongoose": "^8.5.1",
-    "nodemailer": "^6.9.15",
-    "nodemon": "^3.1.4",
+    "nodemailer": "^6.10.0",
+    "nodemon": "^3.1.9",
     "regex": "^4.3.3"
   },
   "devDependencies": {
